@@ -13,7 +13,7 @@ export const Register = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    setErrorMsg(""); // Clear previous error
+    setErrorMsg(""); // Clear error
 
     try {
       await axios.post("https://recipe-app-main-r4yh.onrender.com/auth/register", {

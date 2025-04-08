@@ -28,11 +28,11 @@ export const Navbar = () => {
 
       <div className="nav_link">
         {!isLoggedIn ? (
-            <Link id="Login" to="/Login">Login</Link>
+            <Link id="Login" to="/login">Login</Link>
         ) : (
           <button id="Logout" onClick={logout}>Logout</button>
         )}
-        <Link id="Register" to="/Register">Sign up</Link>
+        <Link id="Register" to="/register">Sign up</Link>
       </div>
     </div>
   );
