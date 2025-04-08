@@ -15,7 +15,7 @@ export const Login = () => {
     setErrorMsg(""); // Clear previous error
 
     try {
-      const result = await axios.post("https://recipe-app-kh93.onrender.com/auth/login", {
+      const result = await axios.post("https://recipe-app-main-r4yh.onrender.com/auth/login", {
         username,
         password,
       });

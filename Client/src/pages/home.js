@@ -10,7 +10,7 @@ export const Home = () => {
   useEffect(() => {
     const fetchRecipes = async () => {
       try {
-        const response = await axios.get("https://recipe-app-kh93.onrender.com/recipes");
+        const response = await axios.get("https://recipe-app-main-r4yh.onrender.com/recipes");
         setRecipes(response.data);
       } catch (err) {
         console.log(err);
@@ -21,7 +21,7 @@ export const Home = () => {
       if (!userID) return; // 🛡️ Don't fetch if not logged in
       try {
         const response = await axios.get(
-          `https://recipe-app-kh93.onrender.com/recipes/savedRecipes/ids/${userID}`
+          `https://recipe-app-main-r4yh.onrender.com/recipes/savedRecipes/ids/${userID}`
         );
         setSavedRecipes(response.data.savedRecipes);
       } catch (err) {
@@ -35,7 +35,7 @@ export const Home = () => {
 
   const saveRecipe = async (recipeID) => {
     try {
-      const response = await axios.put("https://recipe-app-kh93.onrender.com/recipes", {
+      const response = await axios.put("https://recipe-app-main-r4yh.onrender.com/recipes", {
         recipeID,
         userID,
       });

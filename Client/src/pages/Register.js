@@ -16,7 +16,7 @@ export const Register = () => {
     setErrorMsg(""); // Clear previous error
 
     try {
-      await axios.post("https://recipe-app-kh93.onrender.com/auth/register", {
+      await axios.post("https://recipe-app-main-r4yh.onrender.com/auth/register", {
         username,
         password,
       });
