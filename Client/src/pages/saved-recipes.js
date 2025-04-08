@@ -10,17 +10,17 @@ export const SavedRecipes = () => {
     const fetchSavedRecipes = async () => {
       try {
         const response = await axios.get(
-          `https://recipe-app-main-r4yh.onrender.com/recipes/savedRecipes/${userID}`
+          `https://recipe-app-kh93.onrender.com/recipes/savedRecipes/${userID}`
         );
-        console.log("Fetched Recipes:", response.data.savedRecipes); // ✅ logs here
         setSavedRecipes(response.data.savedRecipes);
       } catch (err) {
-        console.log("Fetch Error:", err);
+        console.log(err);
       }
     };
   
     fetchSavedRecipes();
   }, []);
+  
 
   return (
     <div className="home-container">
